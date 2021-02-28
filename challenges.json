@@ -1,0 +1,62 @@
+[
+  {
+    "type": "body",
+    "description": "Vamos lá dev, levanta dessa cadeira e faça 10 flexões sem enconstar o peito no chão, borá!",
+    "amount": 80
+  },
+  {
+    "type": "body",
+    "description": "Vamos lá dev, esse é para as pernas, levanta dessa cadeira e faça 10 agachamentos, borá!",
+    "amount": 60
+  },
+  {
+    "type": "body",
+    "description": "Vamos lá dev, esse é para as pernas, levanta dessa cadeira e faça 10 jump (púlo para cima flexionando as pernas), borá!",
+    "amount": 70
+  },
+  {
+    "type": "body",
+    "description": "Vamos lá dev, esse é para as pernas, levanta dessa cadeira e faça 10 agachamentos e mais 10 polichinelo, borá!",
+    "amount": 60
+  },
+  {
+    "type": "body",
+    "description": "Vamos lá dev, esse é pra ficar monstro, levanta dessa cadeira e faça 10 agachamentos e mais 10 flexões",
+    "amount": 100
+  },
+  {
+    "type": "body",
+    "description": "Vamos lá dev, esse é pra ficar monstro, levanta dessa cadeira e faça 20 flexões",
+    "amount": 80
+  },
+  {
+    "type": "body",
+    "description": "Vamos lá dev, esse é pra ficar monstro, levanta dessa cadeira e faça 30 flexões",
+    "amount": 50
+  },
+  {
+    "type": "body",
+    "description": "Vamos lá dev, esse é pra ficar monstro, levanta dessa cadeira e faça 15 flexões e 15 polichinelo",
+    "amount": 80
+  },
+  {
+    "type": "eye",
+    "description": "Sentado, feche os olhos e cubra-os com as palmas da mão durante 2 minutos, depois abra normalmente.",
+    "amount": 90
+  },
+  {
+    "type": "eye",
+    "description": "Em algum ambiente aberto, olhe o mais longe que puder em quatro direções por 3s, mexa apenas os olhos. Repita 3 vezes.",
+    "amount": 140
+  },
+  {
+    "type": "eye",
+    "description": "Usando os polegares, massage a área abaixo das sobrancelhas em movimentos circulares por 15 segundos.",
+    "amount": 70
+  },
+  {
+    "type": "body",
+    "description": "Em pé, gire a cintura o máximo que puder para a esquerda, segure por cinco segundos. Repita para a direita.",
+    "amount": 90
+  }
+]
