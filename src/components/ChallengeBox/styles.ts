@@ -18,6 +18,9 @@ export const ChallengeBox = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+  @media screen and (max-width: 992px) {
+    margin-top: 2rem;
+  }
 `;
 
 export const ChallengNotActive = styled.div`

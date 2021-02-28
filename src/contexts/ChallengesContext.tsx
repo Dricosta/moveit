@@ -87,7 +87,9 @@ export function ChallengesProvider({
 
     setActiveChallenge(challenge);
 
-    new Audio("/notification.mp3").play();
+    if (window.navigator.platform !== "iPhone") {
+      new Audio("/notification.mp3").play();
+    }
 
     if (Notification.permission === "granted") {
       new Notification("Para de codar e borá treinar dev! 💪🏻", {
