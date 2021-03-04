@@ -8,7 +8,9 @@ interface ButtonProps {
 
 export const ChallengeBox = styled.div`
   height: 100%;
-  background: ${white};
+  background: ${(props) =>
+    props.theme.title === "light" ? white : props.theme.colors.background};
+  border: ${(props) => props.theme.title === "dark" && "1px solid #30363d"};
   border-radius: 5px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
   padding: 1.5rem 2rem;
@@ -54,7 +56,7 @@ export const ChallengeActive = styled.div`
   flex-direction: column;
 
   header {
-    color: ${blue};
+    color: ${(props) => (props.theme.title === "light" ? blue : "#58a6ff")};
     font-weight: 600;
     font-size: 1.25rem;
     padding: 0 2rem 1.5rem;
@@ -75,11 +77,13 @@ export const ChallengeActive = styled.div`
     strong {
       font-size: 2rem;
       font-weight: 600;
-      color: ${title};
+      color: ${(props) =>
+        props.theme.title === "light" ? title : props.theme.colors.text};
       margin: 1.5rem 0 1rem;
     }
     p {
       line-height: 1.5;
+      color: ${(props) => props.theme.colors.text};
       @media screen and (max-width: 992px) {
         margin: 1.5rem 0;
       }

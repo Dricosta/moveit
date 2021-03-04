@@ -25,8 +25,8 @@ export default function Countdown() {
   return (
     <React.Fragment>
       <S.SettingsCount>
-        <S.ButtonCount onClick={() => handleSetTimeAndChoice(0.25 * 60)}>
-          00:15
+        <S.ButtonCount onClick={() => handleSetTimeAndChoice(0.2 * 25)}>
+          00:05
         </S.ButtonCount>
         <S.ButtonCount onClick={() => handleSetTimeAndChoice(0.75 * 60)}>
           00:45
@@ -47,7 +47,7 @@ export default function Countdown() {
           <span>{minuteLeft}</span>
           <span>{minuteRight}</span>
         </S.CountdownBox>
-        <span>:</span>
+        <span className="separator">:</span>
         <S.CountdownBox>
           <span>{secondLeft}</span>
           <span>{secondRight}</span>

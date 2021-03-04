@@ -6,7 +6,8 @@ interface modalProps {
 }
 
 export const Overlay = styled.div`
-  background: rgba(242, 243, 245, 0.8);
+  background: ${(props) =>
+    props.theme.title === "light" ? "rgba(242, 243, 245, 0.8)" : "#18191bcc"};
   position: fixed;
   top: 0;
   bottom: 0;

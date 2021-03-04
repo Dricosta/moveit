@@ -22,6 +22,7 @@ export const Countdown = styled.div`
   > span {
     font-size: 6.25rem;
     margin: 0 0.5rem;
+    color: ${(props) => (props.theme.title === "light" ? title : white)};
   }
 `;
 
@@ -30,19 +31,22 @@ export const CountdownBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: ${white};
+  background: ${(props) => (props.theme.title === "light" ? white : "none")};
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   font-size: 8.5rem;
   text-align: center;
   span {
+    color: ${(props) => (props.theme.title === "light" ? title : white)};
     flex: 1;
   }
   span:first-child {
-    border-right: 1px solid #f0f1f3;
+    border-right: ${(props) =>
+      props.theme.title === "light" && "1px solid #f0f1f3"};
   }
   span:last-child {
-    border-left: 1px solid #f0f1f3;
+    border-left: ${(props) =>
+      props.theme.title === "light" && "1px solid #f0f1f3"};
   }
 `;
 
@@ -55,12 +59,21 @@ export const Button = styled.button<ButtonProps>`
   justify-content: center;
   border: 0;
   border-radius: 5px;
-  background: ${(props) => (props.active ? white : blue)};
-  color: ${(props) => (props.active ? title : white)};
+  background: ${(props) =>
+    props.active
+      ? props.theme.title === "light"
+        ? white
+        : "#21272d"
+      : props.theme.title === "light"
+      ? blue
+      : "#21272d"};
+  color: ${(props) =>
+    props.active ? (props.theme.title === "light" ? title : white) : white};
   font-size: 1rem;
   font-weight: 600;
   transition: background 0.2s ease-in-out;
   outline-color: ${(props) => (props.active ? red : blue)};
+  outline: ${(props) => props.theme.title === "dark" && "none"};
 
   &:disabled {
     cursor: not-allowed;
@@ -81,7 +94,8 @@ export const SettingsCount = styled.section`
 `;
 
 export const ButtonCount = styled.button`
-  background: ${textHighlight};
+  background: ${(props) =>
+    props.theme.title === "light" ? textHighlight : "#21272d"};
   border: 0;
   padding: 0.4rem 1rem;
   border-radius: 20px;

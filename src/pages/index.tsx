@@ -9,6 +9,10 @@ import Countdown from "../components/CountDown";
 import ChallengeBox from "../components/ChallengeBox";
 import { CountdonwProvider } from "../contexts/CountdowContext";
 import { ChallengesProvider } from "../contexts/ChallengesContext";
+import { ThemeContextApp } from "../contexts/ThemeContext";
+import { ThemeProvider } from "styled-components";
+import { useContext } from "react";
+import GlobalStyle from "../styles/global";
 
 interface HomeProps {
   level: number;
@@ -21,33 +25,40 @@ export default function Home({
   currentExperience,
   challengesCompleted,
 }: HomeProps) {
+  const { theme } = useContext(ThemeContextApp);
+
+  console.log("themeINDEX:", theme);
+
   return (
-    <ChallengesProvider
-      level={level}
-      currentExperience={currentExperience}
-      challengesCompleted={challengesCompleted}
-    >
-      <Container>
-        <Head>
-          <title>Move.it</title>
-        </Head>
-        <ExperienceBar />
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <ChallengesProvider
+        level={level}
+        currentExperience={currentExperience}
+        challengesCompleted={challengesCompleted}
+      >
+        <Container>
+          <Head>
+            <title>Move.it</title>
+          </Head>
+          <ExperienceBar />
 
-        <CountdonwProvider>
-          <WrapperContent>
-            <div>
-              <Profile />
-              <CompletedChallenges />
-              <Countdown />
-            </div>
+          <CountdonwProvider>
+            <WrapperContent>
+              <div>
+                <Profile />
+                <CompletedChallenges />
+                <Countdown />
+              </div>
 
-            <div>
-              <ChallengeBox />
-            </div>
-          </WrapperContent>
-        </CountdonwProvider>
-      </Container>
-    </ChallengesProvider>
+              <div>
+                <ChallengeBox />
+              </div>
+            </WrapperContent>
+          </CountdonwProvider>
+        </Container>
+      </ChallengesProvider>
+    </ThemeProvider>
   );
 }
 
